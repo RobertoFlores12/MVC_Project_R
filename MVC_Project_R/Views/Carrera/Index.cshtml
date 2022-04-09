@@ -53,7 +53,7 @@
                             <td>
                                 <a class="btn btn-primary" asp-route-idCarrera="@item.idCarrera" asp-action="Form" asp-route-operaciones="@Operaciones.modificar">Modificar</a>
                                 <a class="btn btn-warning" asp-route-idCarrera="@item.idCarrera" asp-action="Form" asp-route-operaciones="@Operaciones.leer">Leer</a>
-                                <a class="btn btn-danger" asp-route-idCarrera="@item.idCarrera" asp-action="Delete">Eliminar</a>
+                                <a class="btn btn-danger eliminar" asp-route-idCarrera="@item.idCarrera" asp-action="Delete">Eliminar</a>
                             </td>
                         </tr>
                     }
