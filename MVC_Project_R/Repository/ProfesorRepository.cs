@@ -13,7 +13,7 @@ namespace ADS_Project.Repository
         {
             lstProfesores = new List<ProfesorViewModel>
             {
-                new ProfesorViewModel{ idProfesor = 1, nombreProfesor = "Jose", apellidoProfesor = "Quezada", correoProfesor="jose@usonsonate.edu.sv"
+                new ProfesorViewModel{ idProfesor = 1, nombreProfesor = "Carlos", apellidoProfesor = "Rodriguez", correoProfesor="Rodriguez@usonsonate.edu.sv"
                 }
             };
         }

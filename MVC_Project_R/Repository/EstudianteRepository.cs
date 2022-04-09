@@ -14,8 +14,8 @@ namespace ADS_Project.Repository
         {
             lstEstudiantes = new List<EstudianteViewModel>
             {
-                new EstudianteViewModel{ idEstudiante = 1, nombresEstudiante = "Luis", apellidosEstudiante = "Lopez",
-                codigoEstudiante = "LM19I01001", correoEstudiante = "luis@usonsonate.edu.sv"
+                new EstudianteViewModel{ idEstudiante = 1, nombresEstudiante = "Roberto", apellidosEstudiante = "Flores",
+                codigoEstudiante = "FB19I04001", correoEstudiante = "Roberto@usonsonate.edu.sv"
                 }
             };
         }
