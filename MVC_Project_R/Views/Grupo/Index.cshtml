@@ -71,9 +71,9 @@
                                 @Html.DisplayFor(modelItem => item.year)
                             </td>
                             <td>
-                                <a class="btn btn-primary" asp-route-idEstudiante="@item.idGrupo" asp-action="Form" asp-route-operaciones="@Operaciones.modificar">Modificar</a>
-                                <a class="btn btn-warning" asp-route-idEstudiante="@item.idGrupo" asp-action="Form" asp-route-operaciones="@Operaciones.leer">Leer</a>
-                                <a class="btn btn-danger eliminar" asp-route-idEstudiante="@item.idGrupo" asp-action="Delete">Eliminar</a>
+                                <a class="btn btn-primary" asp-route-idGrupo="@item.idGrupo" asp-action="Form" asp-route-operaciones="@Operaciones.modificar">Modificar</a>
+                                <a class="btn btn-warning" asp-route-idGrupo="@item.idGrupo" asp-action="Form" asp-route-operaciones="@Operaciones.leer">Leer</a>
+                                <a class="btn btn-danger eliminar" asp-route-idGrupo="@item.idGrupo" asp-action="Delete">Eliminar</a>
 
                             </td>
                         </tr>
