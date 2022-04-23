@@ -11,10 +11,10 @@
     <div class="col-sm-12">
         <div class="row">
             <div class="col-sm-6">
-                <h3>Estudiantes</h3>
+                <h3>Grupo</h3>
             </div>
             <div class="col-sm-6">
-                <a class="btn btn-success d-block" asp-action="Form" asp-route-operaciones="@Operaciones.agregar">Agregar Estudiante</a>
+                <a class="btn btn-success d-block" asp-action="Form" asp-route-operaciones="@Operaciones.agregar">Agregar Grupo</a>
             </div>
         </div>
 
@@ -43,7 +43,9 @@
                         <th>
                             @Html.DisplayNameFor(model => model.year)
                         </th>
-                        <th></th>
+                        <th>
+                            Acciones
+                        </th>
                     </tr>
                 </thead>
                 <tbody>

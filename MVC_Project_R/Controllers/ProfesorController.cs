@@ -80,7 +80,7 @@ namespace ADS_Project.Controllers
         }
 
 
-        [HttpGet]
+        [HttpPost]
         public IActionResult Delete(int idProfesor)
         {
             try

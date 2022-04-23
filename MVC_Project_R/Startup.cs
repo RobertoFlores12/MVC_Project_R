@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using MVC_Project_R.Repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,7 +30,10 @@ namespace ADS_Project
             services.AddSingleton<IMateriaRepository, MateriaRepository>();
             services.AddSingleton<IProfesorRepository, ProfesorRepository>();
             services.AddSingleton<ICarreraRepository, CarreraRepository>();
+            services.AddSingleton<IGrupoRepository, GrupoRepository>();
+                
         }
+    
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

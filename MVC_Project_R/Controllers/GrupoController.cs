@@ -19,26 +19,36 @@ namespace MVC_Project_R.Controllers
             this.grupoRepository = gruposRepository;
         }
 
-        public IActionResult Index()
-        {
-            return View();
-        }
-
         [HttpGet]
-        public IActionResult Form(int? idMateria, Operaciones operaciones)
+        public IActionResult Index()
         {
             try
             {
-                var materia = new GrupoViewModel();
+                var item = grupoRepository.obtenerGrupo();
+                return View(item);
+            }
+            catch (Exception)
+            {
 
-                if (idMateria.HasValue)
+                throw;
+            }
+        }
+
+        [HttpGet]
+        public IActionResult Form(int? idGrupo, Operaciones operaciones)
+        {
+            try
+            {
+                var grupo = new GrupoViewModel();
+
+                if (idGrupo.HasValue)
                 {
-                    materia = grupoRepository.obtenerGrupoPorID(idMateria.Value);
+                    grupo = grupoRepository.obtenerGrupoPorID(idGrupo.Value);
                 }
 
                 //Indica el tipo de operacion que se esta realizando
                 ViewData["Operaciones"] = operaciones;
-                return View(materia);
+                return View(grupo);
 
             }
             catch (Exception)
@@ -53,14 +63,14 @@ namespace MVC_Project_R.Controllers
         {
             try
             {
-                if (grupoViewModel.idMateria == 0) //En caso de insertar
+                if (grupoViewModel.idGrupo == 0) //En caso de insertar
                 {
 
                     grupoRepository.agregarGrupo(grupoViewModel);
                 }
                 else //En caso de actualizar
                 {
-                    grupoRepository.actualizarGrupo(grupoViewModel.idMateria,grupoViewModel);
+                    grupoRepository.actualizarGrupo(grupoViewModel.idGrupo,grupoViewModel);
 
                 }
 
@@ -74,7 +84,7 @@ namespace MVC_Project_R.Controllers
         }
 
 
-        [HttpGet]
+        [HttpPost]
         public IActionResult Delete(int idGrupo)
         {
             try
