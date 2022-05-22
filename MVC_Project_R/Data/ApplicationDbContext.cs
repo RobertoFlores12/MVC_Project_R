@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ADS_Project.Models;
+using Microsoft.EntityFrameworkCore;
+using MVC_Project_R.Models;
 
 namespace MVC_Project_R.Data
 {
@@ -16,11 +19,11 @@ namespace MVC_Project_R.Data
 
         public DbSet<MateriaViewModel> Materias { get; set; }
 
-        public DbSet<ProfesoresViewModel> Profesores { get; set; }
+        public DbSet<ProfesorViewModel> Profesores { get; set; }
 
         public DbSet<CarreraViewModel> Carreras { get; set; }
 
-        public DbSet<GruposViewModel> Grupos { get; set; }
+        public DbSet<GrupoViewModel> Grupos { get; set; }
 
     }
 }
