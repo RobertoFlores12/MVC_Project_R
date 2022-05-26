@@ -10,6 +10,7 @@ namespace MVC_Project_R.Models
     public class GrupoViewModel
     {
         [Display(Name = "ID")]
+        [Key]
         public int idGrupo { get; set; }
 
         [Required(ErrorMessage = Constants.REQUIRED_FIELD)]
@@ -41,6 +42,8 @@ namespace MVC_Project_R.Models
         [Display(Name = "year")]
 
         public String year { get; set; }
+
+        public bool estado { get; set; }
 
     }
 }

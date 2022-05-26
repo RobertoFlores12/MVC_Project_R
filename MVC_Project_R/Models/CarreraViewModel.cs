@@ -7,6 +7,7 @@ namespace ADS_Project.Models
     {
 
         [Display(Name = "ID")]
+        [Key]
         public int idCarrera { get; set; }
 
         [Required(ErrorMessage = Constants.REQUIRED_FIELD)]
@@ -18,6 +19,8 @@ namespace ADS_Project.Models
         [StringLength(50, MinimumLength = 3, ErrorMessage = "La longitud del campo no debe ser mayor a 50 caracteres ni menor a 3 caracteres.")]
         [Display(Name = "Carrera")]
         public string nombreCarrera { get; set; }
+
+        public bool estado { get; set; }
 
     }
 }
